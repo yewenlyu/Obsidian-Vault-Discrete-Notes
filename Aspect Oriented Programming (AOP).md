@@ -1,4 +1,5 @@
-## Definition
+
+## Overview
 
 **Aspect-Oriented Programming (AOP)** is a programming paradigm that aims to increase modularity by allowing the separation of *cross-cutting concerns*.
 
@@ -22,7 +23,11 @@ Some examples of cross-cutting concerns are:
     
 7. **Concurrency Control**: Managing access to shared resources and ensuring thread safety.
 
-## Code Example
+## AOP Concepts
+
+![[Pasted image 20240415161641.png]]
+
+### Code Example
 
 ```java
 import org.aspectj.lang.annotation.Aspect;
@@ -44,7 +49,7 @@ public class LoggingAspect {
 }
 ```
 
-## Aspect
+### Aspect
 
 **AOP** introduces a new abstraction called an **aspect** which *encapsulates* [[#Cross-cutting Concerns]].
 
@@ -52,20 +57,29 @@ An **aspect** is a module that groups related [[#Advice]] (code that is executed
 
 By applying aspects to a program, you can modularize these [[#Cross-cutting Concerns]] separately from the main business logic.
 
-## Join Point
+*In the example: The `LoggingAspect` class*
+
+### Join Point
 
 A point in the execution of a program where the behavior specified by an [[#Aspect]] can be applied. 
 
 Examples include **method executions**, **field access**, or **object instantiation**.
 
-## Advice
+*In the example: Any method execution within the `com.example.service` package.*
+
+### Advice
 
 The **action** or **code** that should be applied at a particular [[#Join Point]]. Examples include `@Before` , `@After` or `@Around` a method execution.
 
-## Pointcut
+*In the example: a "before" advice that logs a message before the execution of any method matched by the pointcut.*
+
+### Pointcut
 
 A specification that determines where an [[#Advice]] should be applied. It defines a set of [[#Join Point]] based on method signatures, class names, or other criteria.
 
-## Weaving
+*In the example: the `@Pointcut` annotation and targets all methods (`*.*(..)`) within the `com.example.service` package (`execution(* com.example.service.*.*(..))`).*
+
+### Weaving
 
 The process of applying [[#Aspect]] to the main program. This can be done at compile-time, load-time, or runtime.
+
