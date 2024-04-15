@@ -76,7 +76,7 @@ The **action** or **code** that should be applied at a particular [[#Join Point]
 
 ### Pointcut
 
-A specification that determines where an [[#Advice]] should be applied. It defines a set of [[#Join Point]] based on method signatures, class names, or other criteria.
+A predicate that determines where an [[#Advice]] should be applied. It defines a set of [[#Join Point]] based on method signatures, class names, or other criteria.
 
 *In the example: the `@Pointcut` annotation and targets all methods (`*.*(..)`) within the `com.example.service` package (`execution(* com.example.service.*.*(..))`).*
 
