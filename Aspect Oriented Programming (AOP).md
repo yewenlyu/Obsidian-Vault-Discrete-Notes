@@ -25,8 +25,6 @@ Some examples of cross-cutting concerns are:
 
 ## AOP Concepts
 
-![[Pasted image 20240415161641.png]]
-
 ### Code Example
 
 ```java
