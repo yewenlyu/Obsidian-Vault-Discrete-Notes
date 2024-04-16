@@ -2,7 +2,7 @@
 
 `std::unordered_map` requires its key to be *hashable*. 
 
-To declare `std::unordered_map<std::vector<int>, int>` we need to define a custom hash function. 
+For example, to declare `std::unordered_map<std::vector<int>, int>` we need to define a custom hash function. 
 
 ```cpp
 auto vectorHash = [](const vector<int>& v) {
