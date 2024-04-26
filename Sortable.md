@@ -1,0 +1,1 @@
+**Sortable** in C++ means that the "<" (less than) operator can be used to create a *strict weak ordering* of the elements.
