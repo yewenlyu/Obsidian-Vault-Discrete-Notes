@@ -2,6 +2,6 @@
 
 ## Java Libraries
 
-### Mockito
+### Mockit
 
 [[MockedStatic]]
