@@ -11,8 +11,8 @@ def get_all_object_keys_from_s3(s3_client, bucket_name: str) -> list[str]:
     s3_page_iterator = s3_paginator.paginate(Bucket=bucket_name)
     
     return [object_summary['Key']
-           for page in s3_page_iterator
-           for object_summary in page['Contents']]
+            for page in s3_page_iterator
+            for object_summary in page['Contents']]
 ```
 
 ### Customizing the Pagination
@@ -38,6 +38,6 @@ def get_all_execution_names(sfn_client, state_machine_arn: str) -> list[str]:
     )
 
     return [execution_data['name']
-		   for page in response_iterator
-           for execution_data in page['executions']]
+		    for page in response_iterator
+            for execution_data in page['executions']]
 ```
