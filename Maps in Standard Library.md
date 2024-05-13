@@ -17,6 +17,7 @@ unordered_map<vector<int>, int, decltype(vectorHash)> myMap(vectorHash);
 ```
 
 Using user defined types as keys for `std::unordered_map`, can be done by overloading `std::hash` and `operator==` if needed.
+
 ## `std::map`
 
 `std::map` does not require its keys to be [[Hashable]], it only requires that keys be *sortable*.
