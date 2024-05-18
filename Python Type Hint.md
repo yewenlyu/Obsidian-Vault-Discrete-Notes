@@ -1,5 +1,4 @@
 > Source: https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html
-
 ## Variables
 
 Technically many of the type annotations shown below are redundant, since mypy can usually infer the type of a variable from its value. See [Type inference and type annotations](https://mypy.readthedocs.io/en/stable/type_inference_and_annotations.html#type-inference-and-annotations) for more details.
