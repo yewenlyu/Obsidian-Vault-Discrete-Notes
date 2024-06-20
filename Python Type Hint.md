@@ -249,6 +249,8 @@ See [Silencing type errors](https://mypy.readthedocs.io/en/stable/type_inferenc
 
 ## Standard “duck types”
 
+> In Python, if it looks like a duck, walks like a duck, and sounds like a duck, it is a duck.
+
 In typical Python code, many functions that can take a list or a dict as an argument only need their argument to be somehow “list-like” or “dict-like”. A specific meaning of “list-like” or “dict-like” (or something-else-like) is called a “duck type”, and several duck types that are common in idiomatic Python are standardized.
 
 ```python
