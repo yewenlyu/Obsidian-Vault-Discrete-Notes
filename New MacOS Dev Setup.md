@@ -1,0 +1,32 @@
+## Terminal
+
+### iTerm 2
+
+1. https://iterm2.com/downloads.html
+2. Import settings from - https://github.com/yewenlyu/dev-configs/blob/main/iterm2_settings.itermexport
+
+## Xcode
+
+```bash
+xcode-select --install
+```
+
+### oh-my-zsh
+
+https://ohmyz.sh/#install
+
+### zshrc
+
+https://github.com/yewenlyu/dev-configs/blob/main/.zshrc
+
+### zsh-syntax-highlighting
+
+https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+
+### zsh-autocomplete
+
+```bash
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+```
+
+## NeoVim
