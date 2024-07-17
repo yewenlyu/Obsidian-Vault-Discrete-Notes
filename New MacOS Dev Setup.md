@@ -26,7 +26,9 @@ https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 ### zsh-autocomplete
 
 ```bash
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+git clone --depth 1 -- ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
 ```
 
 ## NeoVim
+
+https://github.com/neovim/neovim/blob/master/INSTALL.md
