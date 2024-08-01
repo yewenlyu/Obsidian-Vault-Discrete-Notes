@@ -37,7 +37,6 @@ https://github.com/neovim/neovim/blob/master/INSTALL.md
 
 https://github.com/yewenlyu/kickstart.nvim
 
-
 ### Nerd Font (Optional)
 
 https://www.nerdfonts.com/font-downloads
