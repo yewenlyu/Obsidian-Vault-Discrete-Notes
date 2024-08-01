@@ -33,11 +33,11 @@ git clone --depth 1 -- ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomple
 
 https://github.com/neovim/neovim/blob/master/INSTALL.md
 
-### Nerd Font (Optional)
-
-https://www.nerdfonts.com/font-downloads
-
 ### kickstart
 
 https://github.com/yewenlyu/kickstart.nvim
 
+
+### Nerd Font (Optional)
+
+https://www.nerdfonts.com/font-downloads
