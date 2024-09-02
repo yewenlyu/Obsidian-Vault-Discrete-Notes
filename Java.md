@@ -1,4 +1,5 @@
 [[Generics]]
+[[Java VarArgs]]
 
 ## Java Libraries
 
