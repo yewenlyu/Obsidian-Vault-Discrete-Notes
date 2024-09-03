@@ -49,6 +49,8 @@ git branch -D branch_name
 git push origin --delete branch_name
 ```
 
+When you delete a remote branch, Git automatically removes its tracking reference in your local repository.
+
 ### Delete a Remote Tracking Branch Only
 
 ```shell
