@@ -1,4 +1,3 @@
-
 ### 1. **Defining Constant Variables**
 
 The most basic use of `const` is to declare variables whose values cannot change after initialization.
