@@ -3,3 +3,4 @@
 - **Helping Others** - Go out of your way to help others, don't calculate the benefits.
 - **Systematic Approach for Problem Solving 1** - Don't jump into implementation following other people's instructions without fully understand the problem statement. Take a step back and rethink the solution from scratch.
 - **Systematic Approach for Problem Solving 2** - For every problem you encounter, don't rush on giving an solution based on your experience or instinct. It's okay to take time and carefully rethink the solution.
+- **Never overlook the business** - Learn it as if you learn the system you are working on.
