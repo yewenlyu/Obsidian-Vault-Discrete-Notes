@@ -1,0 +1,3 @@
+The **nullish coalescing (`??`)** operator is a logical operator that returns its right-hand side operand when its left-hand side operand is `null` or `undefined` (i.e. is [[Falsy#Nullish]]), and otherwise returns its left-hand side operand.
+
+The **nullish coalescing operator** can be seen as a special case of the logical OR (`||`) operator. The latter returns the right-hand side operand if the left operand is _any_ [[Falsy]] value, not only `null` or `undefined`. In other words, if you use `||` to provide some default value to another variable `foo`, you may encounter unexpected behaviors if you consider some [[Falsy]] values as usable (e.g., `''` or `0`).
