@@ -2,7 +2,7 @@
 
 ## Operators
 
-[[Nullish coalescing operator (??)]]
+[[Nullish coalescing operator]]
 
 
 ## Concepts
