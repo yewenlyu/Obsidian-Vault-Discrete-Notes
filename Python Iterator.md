@@ -1,15 +1,15 @@
-In Python, an **iterator** is an object that represents a stream of data and allows you to traverse through all the elements in that stream one at a time. It provides a standardized way to iterate over collections, such as lists, tuples, or custom data structures.
+In Python, an **iterator** is an object that represents a *stream* of data and allows you to traverse through all the elements in that stream one at a time. It provides a standardized way to iterate over collections, such as *lists*, *tuples*, or custom data structures.
 
 ### Key Concepts of Iterators
 
 1. **Iterator Protocol**:
-   - An object is considered an iterator if it implements two special methods:
+   - An object is considered an **iterator** if it implements two special methods:
      - **`__iter__()`**: Returns the iterator object itself.
      - **`__next__()`**: Returns the next element in the sequence. When there are no more elements to return, it raises the `StopIteration` exception.
    - This protocol allows you to use the `for` loop or the `next()` function to iterate over objects.
 
 2. **Iterable vs Iterator**:
-   - **Iterable**: Any object that can return an iterator (via `__iter__()`) is called an iterable. Examples include lists, tuples, strings, dictionaries, and sets.
+   - **Iterable**: Any object that can return an iterator (via `__iter__()`) is called an **iterable**. Examples include lists, tuples, strings, dictionaries, and sets.
    - **Iterator**: An object that performs the actual iteration and implements both `__iter__()` and `__next__()`.
 
    An iterable can be converted into an iterator using the `iter()` function.
