@@ -5,7 +5,6 @@
 [[Python Decorator]]
 [[Python Function Params and Args]]
 [[Python Decorated Methods in Class]]
-[[Python Modules]]
 
 [[Python Type Hint]]
 [[Python Enumerated Progress Display]]

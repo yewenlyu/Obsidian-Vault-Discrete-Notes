@@ -1,8 +1,12 @@
-In Python, a **generator** is a special type of iterator that allows you to create a sequence of values on the fly, one at a time, rather than generating and storing the entire sequence in memory. Generators are defined using functions that yield values instead of returning them, making them memory-efficient and ideal for working with large datasets or streams of data.
+---
+aliases:
+  - generator
+---
+In Python, a **generator** is a special type of [[Python Iterator|iterator]] that allows you to create a sequence of values on the fly, one at a time, rather than generating and storing the entire sequence in memory. Generators are defined using functions that yield values instead of returning them, making them memory-efficient and ideal for working with large datasets or streams of data.
 
 ### How Generators Work
 
-Generators are created using functions that contain one or more `yield` statements. When a generator function is called, it doesn’t execute immediately but returns a **generator object**. This object can then be iterated over, with each call to `next()` on the generator resuming from where it left off in the function, running until it encounters the next `yield` statement or the end of the function.
+**Generators** are created using functions that contain one or more `yield` statements. When a generator function is called, it doesn’t execute immediately but returns a **generator object**. This object can then be iterated over, with each call to `next()` on the generator resuming from where it left off in the function, running until it encounters the next `yield` statement or the end of the function.
 
 ### Defining a Generator
 
@@ -133,6 +137,6 @@ This generator creates an infinite counter, which continues yielding incremented
 - They use **lazy evaluation**, generating items only when requested, making them memory-efficient for large datasets or streams.
 - The **`yield`** statement suspends and saves the state of the generator, allowing it to resume from where it left off.
 - **Generator expressions** provide a compact syntax for creating generators.
-- Generators are ideal for processing large files, creating infinite sequences, or working with data streams.
+- **Generators** are ideal for processing large files, creating infinite sequences, or working with data streams.
 
-Generators are a powerful feature in Python, allowing you to create efficient and readable code when working with large or infinite sequences. They provide both memory and computational efficiency, especially in data-intensive applications.
+**Generators** are a powerful feature in Python, allowing you to create efficient and readable code when working with large or infinite sequences. They provide both memory and computational efficiency, especially in data-intensive applications.

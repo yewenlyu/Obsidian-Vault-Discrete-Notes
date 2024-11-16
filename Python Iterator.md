@@ -1,3 +1,7 @@
+---
+aliases:
+  - iterator
+---
 In Python, an **iterator** is an object that represents a *stream* of data and allows you to traverse through all the elements in that stream one at a time. It provides a standardized way to iterate over collections, such as *lists*, *tuples*, or custom data structures.
 
 ### Key Concepts of Iterators
@@ -9,16 +13,16 @@ In Python, an **iterator** is an object that represents a *stream* of data and a
    - This protocol allows you to use the `for` loop or the `next()` function to iterate over objects.
 
 2. **Iterable vs Iterator**:
-   - **Iterable**: Any object that can return an iterator (via `__iter__()`) is called an **iterable**. Examples include lists, tuples, strings, dictionaries, and sets.
+   - **Iterable**: Any object that can return an iterator (in `__iter__()`) is called an [[Python Iterable|iterable]]. Examples include *lists*, *tuples*, *strings*, *dictionaries*, and *sets*.
    - **Iterator**: An object that performs the actual iteration and implements both `__iter__()` and `__next__()`.
 
-   An iterable can be converted into an iterator using the `iter()` function.
+   An [[Python Iterable|iterable]] can be converted into an iterator using the `iter()` function.
 
 ---
 
 ### Example: Iterator from an Iterable
 
-Here’s an example of using an iterator to traverse a list:
+Here’s an example of using an **iterator** to traverse a list:
 
 ```python
 # Iterable object
@@ -36,8 +40,8 @@ print(next(iterator))  # Raises StopIteration
 ```
 
 In this example:
-- `numbers` is a list (an iterable).
-- `iter(numbers)` creates an iterator for the list.
+- `numbers` is a *list* (an iterable).
+- `iter(numbers)` creates an **iterator** for the list.
 - `next(iterator)` retrieves elements one at a time, stopping when there are no more elements.
 
 ---
@@ -112,7 +116,7 @@ This iterator never raises `StopIteration` because it generates numbers infinite
 Python provides several built-in iterators, such as:
 - **`iter()`**: Converts an iterable into an iterator.
 - **`enumerate()`**: Returns an iterator that yields index-value pairs.
-- **`zip()`**: Combines multiple iterables into tuples of corresponding elements.
+- **`zip()`**: Combines multiple iterables into *tuples* of corresponding elements.
 - **`reversed()`**: Returns an iterator that traverses an iterable in reverse order.
 
 #### Example with Built-in Iterators
@@ -145,36 +149,9 @@ for pair in zip(numbers, letters):
 - **Iterators**:
   - Require both `__iter__()` and `__next__()` methods.
   - More explicit and typically involve state management in a class.
-- **Generators**:
+- [[Python Generator|generator]]s:
   - Created using functions with the `yield` keyword.
   - Automatically implement the iterator protocol.
-
-#### Example Comparison
-
-Custom Iterator:
-```python
-class MyIterator:
-    def __init__(self, data):
-        self.data = data
-        self.index = 0
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.index >= len(self.data):
-            raise StopIteration
-        value = self.data[self.index]
-        self.index += 1
-        return value
-```
-
-Generator:
-```python
-def my_generator(data):
-    for item in data:
-        yield item
-```
 
 ---
 
@@ -206,4 +183,4 @@ Here, the file object acts as an iterator, reading one line at a time.
 | Traversal Method   | Can be converted into an iterator | Can be traversed using `next()`  |
 | Reusability        | Can be reused by calling `iter()` again | Cannot be reused without recreating |
 
-Python iterators are a fundamental tool for working with sequences and streams in an efficient and Pythonic way. Understanding them helps you write more memory-efficient and readable code, especially when dealing with large datasets or custom data structures.
+Python **iterators** are a fundamental tool for working with sequences and streams in an efficient and Pythonic way. Understanding them helps you write more *memory-efficient* and *readable* code, especially when dealing with large datasets or custom data structures.
