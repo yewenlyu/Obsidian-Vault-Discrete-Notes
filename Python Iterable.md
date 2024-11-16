@@ -181,17 +181,17 @@ with open("large_file.txt") as file:
         print(line.strip())
 ```
 
-Here, the `file` object acts as an iterable, and the `for` loop reads it line by line.
+Here, the file object acts as an iterable, and the `for` loop reads it line by line.
 
 ---
 ### Summary
 
-| **Feature**          | **Description**                                                                |
-| -------------------- | ------------------------------------------------------------------------------ |
-| **Definition**       | An object capable of returning an iterator to iterate over its elements.       |
-| **Key Method**       | Implements `__iter__()` (or `__getitem__()`).                                  |
-| **Examples**         | Lists, tuples, strings, dictionaries, sets, generators, custom objects.        |
-| **Common Use Cases** | Looping with `for`, comprehensions, working with large datasets, file reading. |
+| **Feature**               | **Description**                                                     |
+|----------------------------|---------------------------------------------------------------------|
+| **Definition**             | An object capable of returning an iterator to iterate over its elements. |
+| **Key Method**             | Implements `__iter__()` (or `__getitem__()`).                     |
+| **Examples**               | Lists, tuples, strings, dictionaries, sets, generators, custom objects. |
+| **Common Use Cases**       | Looping with `for`, comprehensions, working with large datasets, file reading. |
 
 ### Conclusion
 
