@@ -1,4 +1,5 @@
 [[Python Misc]]
+[[Python Iterator]]
 [[Python Iterable]]
 [[Python Generator]]
 [[Python Decorator]]
