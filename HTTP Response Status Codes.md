@@ -37,11 +37,11 @@ The server cannot or will not process the request due to something that is perce
 
 ^962a49
 
-Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response.
+Although the HTTP standard specifies "unauthorized", semantically this response means "*unauthenticated*". That is, the client must authenticate itself to get the requested response.
 
 ### `403` Forbidden
 
-The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource. Unlike **401 Unauthorized**, the client's identity is known to the server.
+The client does not have access rights to the content; that is, it is *unauthorized*, so the server is refusing to give the requested resource. Unlike **401 Unauthorized**, the client's identity is known to the server.
 
 ### `404` Not Found
 
