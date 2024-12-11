@@ -25,12 +25,12 @@ Here's a list of the common arguments:
 - **Description:** The command and its arguments to execute. Can be a list or a single string.
 - **Type:** `list[str]` (preferred) or `str`
 - **Example:**
-    
-    ```python
-    subprocess.run(["ls", "-l"])  # List of command and arguments
-    subprocess.run("ls -l", shell=True)  # Single string with `shell=True`
-    ```
-    
+
+```python
+subprocess.run(["ls", "-l"])  # List of command and arguments
+subprocess.run("ls -l", shell=True)  # Single string with `shell=True`
+```
+
 
 ---
 
@@ -40,11 +40,11 @@ Here's a list of the common arguments:
 - **Type:** `bool`
 - **Default:** `False`
 - **Example:**
-    
-    ```python
-    subprocess.run("echo $HOME", shell=True)
-    ```
-    
+
+```python
+subprocess.run("echo $HOME", shell=True)
+```
+
 
 ---
 
@@ -54,11 +54,11 @@ Here's a list of the common arguments:
 - **Type:** `bool`
 - **Default:** `False`
 - **Example:**
-    
-    ```python
-    subprocess.run(["echo", "hello"], text=True)
-    ```
-    
+
+```python
+subprocess.run(["echo", "hello"], text=True)
+```
+
 
 ---
 
@@ -68,12 +68,12 @@ Here's a list of the common arguments:
 - **Type:** `bool`
 - **Default:** `False`
 - **Example:**
-    
-    ```python
-    result = subprocess.run(["ls", "-l"], capture_output=True, text=True)
-    print(result.stdout)
-    ```
-    
+
+```python
+result = subprocess.run(["ls", "-l"], capture_output=True, text=True)
+print(result.stdout)
+```
+
 
 ---
 
@@ -81,17 +81,17 @@ Here's a list of the common arguments:
 
 - **Description:** Redirects the output streams (`stdout` and `stderr`). Can capture, discard, or redirect them to files.
 - **Type:**
-    - `subprocess.PIPE` (capture)
-    - `subprocess.DEVNULL` (discard)
-    - File object (redirect to file)
+- `subprocess.PIPE` (capture)
+- `subprocess.DEVNULL` (discard)
+- File object (redirect to file)
 - **Default:** `None` (output to console)
 - **Example:**
-    
-    ```python
-    with open("output.txt", "w") as f:
-        subprocess.run(["ls", "-l"], stdout=f)
-    ```
-    
+
+```python
+with open("output.txt", "w") as f:
+	subprocess.run(["ls", "-l"], stdout=f)
+```
+
 
 ---
 
@@ -99,17 +99,17 @@ Here's a list of the common arguments:
 
 - **Description:** Specifies the input stream for the subprocess.
 - **Type:**
-    - `subprocess.PIPE` (provide input)
-    - `subprocess.DEVNULL` (discard)
-    - File object (read from file)
+- `subprocess.PIPE` (provide input)
+- `subprocess.DEVNULL` (discard)
+- File object (read from file)
 - **Default:** `None`
 - **Example:**
-    
-    ```python
-    result = subprocess.run(["cat"], input="Hello, world!", text=True, stdin=subprocess.PIPE)
-    print(result.stdout)
-    ```
-    
+
+```python
+result = subprocess.run(["cat"], input="Hello, world!", text=True, stdin=subprocess.PIPE)
+print(result.stdout)
+```
+
 
 ---
 
@@ -119,14 +119,14 @@ Here's a list of the common arguments:
 - **Type:** `bool`
 - **Default:** `False`
 - **Example:**
-    
-    ```python
-    try:
-        subprocess.run(["false"], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Command failed with return code {e.returncode}")
-    ```
-    
+
+```python
+try:
+	subprocess.run(["false"], check=True)
+except subprocess.CalledProcessError as e:
+	print(f"Command failed with return code {e.returncode}")
+```
+
 
 ---
 
@@ -136,11 +136,11 @@ Here's a list of the common arguments:
 - **Type:** `str` (path)
 - **Default:** `None` (current working directory)
 - **Example:**
-    
-    ```python
-    subprocess.run(["ls"], cwd="/tmp")
-    ```
-    
+
+```python
+subprocess.run(["ls"], cwd="/tmp")
+```
+
 
 ---
 
@@ -150,14 +150,14 @@ Here's a list of the common arguments:
 - **Type:** `dict[str, str]` or `None`
 - **Default:** `None`
 - **Example:**
-    
-    ```python
-    import os
-    env = os.environ.copy()
-    env["MY_VAR"] = "value"
-    subprocess.run(["printenv", "MY_VAR"], env=env, text=True)
-    ```
-    
+
+```python
+import os
+env = os.environ.copy()
+env["MY_VAR"] = "value"
+subprocess.run(["printenv", "MY_VAR"], env=env, text=True)
+```
+
 
 ---
 
@@ -167,14 +167,14 @@ Here's a list of the common arguments:
 - **Type:** `float` or `None`
 - **Default:** `None` (no timeout)
 - **Example:**
-    
-    ```python
-    try:
-        subprocess.run(["sleep", "5"], timeout=2)
-    except subprocess.TimeoutExpired:
-        print("Command timed out!")
-    ```
-    
+
+```python
+try:
+	subprocess.run(["sleep", "5"], timeout=2)
+except subprocess.TimeoutExpired:
+	print("Command timed out!")
+```
+
 
 ---
 
@@ -184,11 +184,11 @@ Here's a list of the common arguments:
 - **Type:** `bool`
 - **Default:** `True` (on Unix) or `False` (on Windows)
 - **Example:**
-    
-    ```python
-    subprocess.run(["ls"], close_fds=True)
-    ```
-    
+
+```python
+subprocess.run(["ls"], close_fds=True)
+```
+
 
 ---
 
@@ -196,16 +196,16 @@ Here's a list of the common arguments:
 
 - **Description:** Specifies the buffering policy for the I/O streams.
 - **Type:** `int`
-    - `0`: Unbuffered
-    - `1`: Line buffered
-    - `-1`: Default (fully buffered)
+- `0`: Unbuffered
+- `1`: Line buffered
+- `-1`: Default (fully buffered)
 - **Default:** `-1`
 - **Example:**
-    
-    ```python
-    subprocess.run(["ls"], bufsize=1, text=True)
-    ```
-    
+
+```python
+subprocess.run(["ls"], bufsize=1, text=True)
+```
+
 
 ---
 
@@ -215,11 +215,11 @@ Here's a list of the common arguments:
 - **Type:** `str` (path to executable)
 - **Default:** None
 - **Example:**
-    
-    ```python
-    subprocess.run(["ls"], executable="/bin/ls")
-    ```
-    
+
+```python
+subprocess.run(["ls"], executable="/bin/ls")
+```
+
 
 ---
 
@@ -247,40 +247,40 @@ print(result.returncode)  # Output: 0
 ### **Common Use Cases**
 
 1. **Running a command and capturing its output:**
-    
-    ```python
-    result = subprocess.run(["ls", "-l"], capture_output=True, text=True)
-    print(result.stdout)
-    ```
+
+```python
+result = subprocess.run(["ls", "-l"], capture_output=True, text=True)
+print(result.stdout)
+```
     
 2. **Redirecting output to a file:**
     
-    ```python
-    with open("output.txt", "w") as f:
-        subprocess.run(["ls", "-l"], stdout=f)
-    ```
+```python
+with open("output.txt", "w") as f:
+	subprocess.run(["ls", "-l"], stdout=f)
+```
     
 3. **Providing input to a command:**
     
-    ```python
-    result = subprocess.run(["cat"], input="Hello, world!", text=True, capture_output=True)
-    print(result.stdout)
-    ```
+```python
+result = subprocess.run(["cat"], input="Hello, world!", text=True, capture_output=True)
+print(result.stdout)
+```
     
 4. **Handling errors with `check`:**
     
-    ```python
-    try:
-        subprocess.run(["false"], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Command failed: {e}")
-    ```
+```python
+try:
+	subprocess.run(["false"], check=True)
+except subprocess.CalledProcessError as e:
+	print(f"Command failed: {e}")
+```
     
 5. **Setting a timeout:**
     
-    ```python
-    try:
-        subprocess.run(["sleep", "10"], timeout=2)
-    except subprocess.TimeoutExpired:
-        print("Command timed out!")
-    ```
+```python
+try:
+	subprocess.run(["sleep", "10"], timeout=2)
+except subprocess.TimeoutExpired:
+	print("Command timed out!")
+```
