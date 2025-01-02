@@ -5,10 +5,14 @@
 3. Make sure *personal access token* is setup:
 	a.  `git config --global credential.helper osxkeychain`
 	b. Perform a Git *pull* and *push*
-4. Enable Git Community plugin
-5. In Git plugin option, specify **Commit Author**
-6. Open **command palette** and select **"Git: Create Backup"**
-7. Open **command palette** and select **"Git: Open Source Control View"**
+	```shell
+	Username for 'https://github.com': yewenlyu
+	Password for 'https://yewenlyu@github.com': <personal_access_token>
+	```
+1. Enable Git Community plugin
+2. In Git plugin option, specify **Commit Author**
+3. Open **command palette** and select **"Git: Create Backup"**
+4. Open **command palette** and select **"Git: Open Source Control View"**
 
 ## iOS / iPadOS
 
