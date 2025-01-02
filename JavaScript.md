@@ -4,7 +4,6 @@
 
 [[Nullish coalescing operator]]
 
-
 ## Concepts
 
 [[Falsy]]

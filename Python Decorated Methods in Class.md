@@ -1,4 +1,3 @@
-
 ## `@classmethod`
 
 - **Binding**: A `@classmethod` is bound to the class and not to an instance. It takes `cls` as its first parameter, which represents the class itself.
