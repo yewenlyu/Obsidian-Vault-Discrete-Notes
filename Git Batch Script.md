@@ -15,7 +15,7 @@ else
 fi
 
 for dir in */ ; do
-    echo "Excuting command \"$command\" in diretory [./$dir]..."
+    echo "Excuting command \"$command\" in directory [./$dir]..."
     (cd "$dir" && eval "$command")
 done
 ```
